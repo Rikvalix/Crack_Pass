@@ -153,7 +153,8 @@ class DictionnaireAttaque:
 
 
 class AttaqueBruteForce:
-    def __init__(self, password):
+    def __init__(self, hash, algo_chiffrement ) :
+        
         self.caracteres = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
                            's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                            'K', 'L', 'M',
@@ -161,15 +162,36 @@ class AttaqueBruteForce:
                            '5', '6', '7', '8', '9', ',', '?', ';', '.', ':', '/', '!', '§', 'ù', '%', '*',
                            'µ', '$', '£', '^', '¨', '&', 'é', '~', '#', "'", '(', '[', '-', '|', 'è', '`', '_', '\\',
                            'ç', '^', 'à', '@', ')', ']', '°', '+', '=', '}', '"']
-        self.password = password
-        self.caracteres = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-                           's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        self.hash = hash
+        self.algo_chiffrement = algo_chiffrement
+        self.caracteres_minimum = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+                           's', 't', 'u', 'v', 'w', 'x', 'y', 'z','_']
+        
+    def Brute_Force(self, mot : str ):
+        """Fonction brute force 
 
-    def Brute_Force(self, word, longueur):
-        if longueur <= 5:
-            for letter in self.caracteres:
-                if self.password == word + letter:
-                    print(f"Mdp : {word + letter}")
-                else:
-                    # print(word + letter)
-                    self.Brute_Force(word + letter, longueur + 1)
+        Args:
+            mot (str): _description_
+
+        Returns:
+            _type_: _description_
+        """
+        run = True
+        taille = 1 
+        while run:
+            match self.algo_chiffrement:
+                case "SHA-256":
+                      for lettres in self.caracteres_minimum:
+                        if sha256(mot + lettres) == self.hash  :
+                            hash_dechiffre = mot + lettres 
+                            run = False
+                            return hash_dechiffre
+                        else : 
+                            mot = mot + lettres
+                            taille += 1 
+                            #print(mot)
+                            print(sha256(mot))
+
+                
+
+
