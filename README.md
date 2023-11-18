@@ -29,10 +29,10 @@ Projet NSI fin d'année
         <li><code>sha256(string: str) -> str</code> : Enchiffre le mot de passe en SHA256 et retourne le hash en tant que chaîne de caractères.</li>
         <li><code>sha512(string: str) -> str</code> : Enchiffre le mot de passe en SHA512 et retourne le hash en tant que chaîne de caractères.</li>
         <li><code>sha1(string: str) -> str</code> : Enchiffre le mot de passe en SHA1 et retourne le hash en tant que chaîne de caractères.</li>
-        <img src="assets/md5_exemple.PNG">
+        <img src="documentation/assets/md5_exemple.PNG">
         <hr>
         <li><code>hasheur_random(lst: list) -> list</code> : Hash le fichier de mots de passe en clair en utilisant des algorithmes de hachage aléatoires et retourne une liste de hashes correspondants.</li>
-        <img src="assets/hasheur_random.PNG">
+        <img src="documentation/assets/hasheur_random.PNG">
     </ul>
     <hr>
     <h2>Classe :</h2>
@@ -56,23 +56,23 @@ Projet NSI fin d'année
         <li><code>Dictionnaire_Sha1() -> bool</code> : Chiffre et compare un mot de passe en clair en utilisant l'algorithme SHA1. Met à jour <code>__DecryptedTarget</code> si le mot de passe est déchiffré avec succès.</li>
         <li><code>Dictionnaire_sha256() -> bool</code> : Chiffre et compare un mot de passe en clair en utilisant l'algorithme Sha256. Met à jour <code>__DecryptedTarget</code> si le mot de passe est déchiffré avec succès.</li>
         <li><code>Dictionnaire_Sha512() -> bool</code> : Chiffre et compare un mot de passe en clair en utilisant l'algorithme Sha512. Met à jour <code>__DecryptedTarget</code> si le mot de passe est déchiffré avec succès.</li>
-        <img src="assets/dictionnaire_sha1.PNG">
+        <img src="documentation/assets/dictionnaire_sha1.PNG">
         <hr>
         <li><code>dechiffrement</code> : Tentative de dechiffrer le mot de passe en essayant les differents encodage</li>
-        <img src="assets/dechiffrement.PNG">
+        <img src="documentation/assets/dechiffrement.PNG">
         <hr>
         <li><code>dechiffrement_liste</code> : Permet le déchiffrement d'une liste de mot de passe hashé</li>
-        <img src="assets/dechiffrement_liste.PNG">
+        <img src="documentation/assets/dechiffrement_liste.PNG">
         <hr>
         <li><code>afficher</code> : affichage des resultats</li>
-        <img src="assets/affichage.PNG">
+        <img src="documentation/assets/affichage.PNG">
     </ul>
     </div>
     <hr>
     <h1> Affichage de l'interface</h1>
     <div class="decal">
     <p> Affiche les widgets et permet de chiffrer ou dechiffer un mot de passe grace a une attaque dictionnaire</p>
-    <img src="assets/interface.PNG">
+    <img src="documentation/assets/interface.PNG">
     <hr>
     <h2>Fonctions</h2>
     <ul class = decal>
@@ -86,13 +86,13 @@ Projet NSI fin d'année
         <li><code>Dechiffrement_dictionnaire</code> : Tente le dechiffrement du hash mis dans la zone de texte et affiche le resultat en console</li>
     </ul>
     <p>Extrait du code tkinter pour l'affichage</p>
-    <img src="assets/tkinter.PNG">
+    <img src="documentation/assets/tkinter.PNG">
     <hr>
         </div><h2>Logging</h2><div class="decal">
         <p>Consigne les actions effectués dans le programme</p>
-        <img src="assets/logging.PNG">
+        <img src="documentation/assets/logging.PNG">
     </div>
         <h2>Version terminal</h2>
-        <img class="decal" src = "assets/cmd.PNG">       
+        <img class="decal" src = "documentation/assets/cmd.PNG">       
     </body>
     </html>
